@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chennai Map with Hotspots</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Embedded CSS -->
+    <style>
+        h1 {
+            text-align: center;
+            color: darkblue;
+        }
+
+        h2 {
+            text-align: center;
+            color: brown;
+            margin-top: 15px;
+        }
+
+        .map-container {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        iframe {
+            border: 2px solid black;
+            margin-top: 15px;
+        }
+
+        .frame-section {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .links {
+            text-align: center;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Chennai City Map with Hotspots</h1>
+
+    <!-- NEW HEADING -->
+    <h2>Embedded Chennai Map with Hotspot</h2>
+
+    <!-- Inline CSS -->
+    <p style="text-align:center; color:green;">
+        Click on different areas of Chennai to view details in the frame below.
+    </p>
+
+    <!-- Map with Hotspots -->
+    <div class="map-container">
+        <img src="chennai-map.jpg" alt="Chennai Map" usemap="#chennaitour" width="600">
+
+        <map name="chennaitour">
+            <!-- Marina Beach (Centered Hotspot) -->
+            <area shape="rect"
+                  coords="250,400,350,450"
+                  href="https://en.wikipedia.org/wiki/Marina_Beach"
+                  target="info"
+                  alt="Marina Beach">
+
+            <!-- Guindy -->
+            <area shape="rect"
+                  coords="300,400,420,470"
+                  href="https://en.wikipedia.org/wiki/Guindy"
+                  target="info"
+                  alt="Guindy">
+        </map>
+    </div>
+
+    <!-- Iframe -->
+    <div class="frame-section">
+        <h2>Location Information</h2>
+        <iframe name="info" width="80%" height="300"
+                src="https://en.wikipedia.org/wiki/Chennai">
+        </iframe>
+    </div>
+
+    <!-- Links -->
+    <div class="links">
+        <a href="https://www.tamilnadutourism.tn.gov.in/" target="_blank">
+            Tamil Nadu Tourism
+        </a>
+        |
+        <a href="https://en.wikipedia.org/wiki/Chennai" target="info">
+            About Chennai
+        </a>
+    </div>
+
+</body>
+</html>
